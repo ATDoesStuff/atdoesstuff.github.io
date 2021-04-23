@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" as="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="preconnect" as="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+    <title>Fakebook - Inicia Sesion</title>
+
+    <!-- <?php 
+        $realUser = $_POST["nameUserReg"];
+        $realPass = $_POST["passUserReg"];
+
+        if( $realPass == "" || $realPass == null){
+            $realPass = "Totodile158";
+        }
+        if( $realUser == "" || $realUser == null){
+            $realUser = "ChrisVega";
+        }
+        function forgotUser(){
+            echo "<script type='text/javascript'>alert('Usuario: ' + user + '\nContraseña: ' + realPass );</script>";
+        }
+    ?> -->
+
+    <script type="text/javascript">
+        var realUser = 1;
+        console.log(realUser);
+
+        function validUser(){
+            var user = document.forms["registro"] ["nameUser"].value;
+            var pass = document.forms["registro"] ["passUser"].value;
+
+            if(user !== realUser || pass !== realPass ){
+                alert("Usuario o Contraseña Incorrecto >:(");
+                return false;
+            }
+        }
+
+        // function forgotUser(){
+        //     window.alert("Usuario: " + realUser +"\n" + "Contraseña: " + realPass);
+        // }
+    </script>
+
+</head>
+    
+<body>
+    <div class="formRight vertical-center">
+        <form name="registro" action="mainpage.php" onsubmit="return validUser()" method="POST" class="formBox formBG"> 
+
+            <!-- Nombre de usuario aqui-->
+            <input type="text" name="nameUser" placeholder="Nombre De Usuario" class="textBox"> <br><br>
+            <!-- Contraseña aqui-->
+            <input type="password" name="passUser" placeholder="Contraseña" class="textBox"> <br><br>
+            <input type="submit" value="Entrar" class="sendButton border5px"> <br><br>
+            <input type="button" onclick="forgotUser()" value="Olvidaste Tu Usuario o Contraseña?" class="forgotButton">            
+            <!-- Iniciar sesion y crear cuenta -->
+            <div class="divForm"></div>
+
+            <a href="register.php" class="button registerButton border5px">Crear Cuenta Nueva</a>
+
+        </form>
+    </div>
+    
+    <div class="title ">
+        <h1>Fakebook</h1>
+        <h2>Fakebook te ayuda a comunicarte y compartir<br>con las personas que forman parte de tu vida.</h2>
+    </div>
+</body>
+</html>
