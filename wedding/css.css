@@ -1,0 +1,53 @@
+:root{
+    --coral:  #ffa1a1 ;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px;
+    font-family: Comic Sans MS;
+}
+main{
+    padding: 1rem 10rem;
+    background-image: url(resources/boda.jpg);
+}
+h1{
+    font-size: 6rem;
+    background-color: var(--coral);
+    color: #ffff;
+    margin: 0% 0%;
+    text-align: center;
+}
+.DIV{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/* Width cambia el tamaño de los objetos */
+.eevee{
+    width: 120%;
+}
+.queso{
+    width: 6%;
+}
+.imgBoda{
+    max-width: 80%;
+}
+/* border radius hace que los bordes sean mas redondos */
+.round{
+    border-radius: 10%;
+    background-color: #ffff;
+    padding: 2rem;
+}
+/* transform: scaleX(-1) hace que se inviertan en esa direccion las imagenes */
+.megalopan:hover{
+    transform: scaleX(-1);
+}
+.eevee:hover{
+    transform: scaleX(-1);
+}

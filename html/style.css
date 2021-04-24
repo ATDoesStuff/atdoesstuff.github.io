@@ -1,0 +1,66 @@
+:root{
+    --main: #9f5cd0;
+    --sec: #a569bd;
+    --art: #ecf0f1;
+    --mainText: #ffff;
+    --regText: #17202a; 
+    --tableBorder: #212f3c; 
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;
+    font-family: "Nunito", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+main{
+    text-align: center;
+}
+/* Se le pueden aplicar atrivutos a varios etiquetas si los divides con una coma como en el ejemplo de abajo */
+h1, h5{
+    text-align: center;
+    background-color: var(--main);
+    color: var(--mainText);
+    padding: 2rem;
+    margin: 0%;
+}
+h1{
+    text-decoration: underline;
+}
+h5{
+    padding-top: 0%;
+}
+/* Utilizados por las tablas */
+table, th, td{
+    border: 3px solid var(--tableBorder);
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+th, td{
+    padding: 4px 10rem;
+}
+th{
+    background-color: var(--sec);
+}
+/* centra el contenido */
+.mainContent{
+    text-align: center;
+}
+/* hace los bordes un poco redondos */
+.roundBox{
+    border-radius: 25px 25px 25px 25px;
+    -moz-border-radius: 25px 25px 25px 25px;
+    -webkit-border-radius: 25px 25px 25px 25px;
+    border: 0px solid #000000;
+}
+/* clase utilizada por el contenido principal */
+.article{
+    margin: 1rem 2rem;
+    padding: 2rem;
+
+    font-weight: 600;
+    background-color: var(--art);
+    color: var(--regText);
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+        <!-- Stylesheets & Fonts -->
+    <link rel="preload" href="../normalize.css">
+    <link rel="preload" href="jsStyle.css">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="jsStyle.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Zilla+Slab&display=swap" rel="stylesheet">  
+
+    <title>Prompts & Alerts</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Prompts, Alerts & Operaciones Con JS</h1>
+    </header>
+    
+    <main>
+        <section class="mainSections">
+            <h3>Prompts & Alerts</h3>
+            <div class="box">
+                    <p id="testID">Presiona el boton para comenzar</p>
+                    <input class="box" type="button" id="buttonStart" value="Click para comenzar!" onclick="userInput()">
+            </div>
+        </section>
+        
+        <section class="mainSections">
+            <h3>Suma con Form y JS</h3>
+            <form name="suma" action="" onsubmit="return calcularSuma()" > 
+
+                <label for="inputUser">Primer Numero: </label>
+                <input type="number" name="numero1" placeholder="x"> <br><br>
+        
+                <label for="inputUser">Segundo Numero: </label>
+                <input type="number" name="numero2" placeholder="y"> <br><br>
+        
+                <label for="inputUser">Resultado: </label>
+                <input type="text" name="Resultado" placeholder="resultado" id="result"> <br><br>
+        
+                <input type="reset" value="Reset">
+                <input type="button" value="Sumar" id="calcular" onclick="calcularSuma()">
+        
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p class="firma box">Hecho por @Christopher Vega Mendez <br>11/04/2021<br>*Revision el 23/04/2021 </p>
+    </footer>
+
+    <!-- Script para Prompts y Alerts -->
+    <script>
+
+        //Aqui se verifica que el usuario haya introducido una respuesta valida
+        function userInput(){
+            var textUser = "";
+            var i = 0;
+            textUser = prompt("Introduzca una palabra y/o frase porfavor:", "Totodile");
+
+            if (textUser == null || textUser == ""){
+                document.getElementById("testID").innerHTML = "Se cancelo el prompt, favor de intentar de nuevo";
+            }else{
+                document.getElementById("testID").innerHTML = textUser;
+                while(i < textUser.length){
+                    alert("La letra es: " + textUser[i]);
+                    i++;
+                }
+            }       
+        }
+        //Funcion que suma dos valores dados por la Form
+        function calcularSuma(){
+            var x = parseInt(document.forms["suma"] ["numero1"].value);
+            var y = parseInt(document.forms["suma"] ["numero2"].value);
+
+            var z = x + y;
+
+            document.getElementById("result").value = z;
+        }
+    </script>
+</body>
+</html>

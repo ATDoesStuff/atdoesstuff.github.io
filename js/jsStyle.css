@@ -1,0 +1,23 @@
+body{
+    padding: 10px;
+    background-color:#e5e5e5;
+    font-family: 'Rubik', Courier, monospace;
+}
+main{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+footer{
+    margin-top: 60px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+
+.mainSections{
+    border: 1px solid black;
+    padding: 20px;
+}

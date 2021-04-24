@@ -5,72 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Icono de la pagina -->
+    <link rel = "icon" href = "/res/iconMain.png" type = "image/x-icon"> 
+
+    <!-- Llamar las hojas de estilo, y una font de GoogleFonts -->
     <link rel="preconnect" as="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="normalize.css">
-    <link rel="preconnect" as="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" as="stylesheet" href="mainStyle.css">
+    <link rel="stylesheet" href="mainStyle.css">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 
-    <title>Fakebook - Inicia Sesion</title>
-
-    <!-- <?php 
-        $realUser = $_POST["nameUserReg"];
-        $realPass = $_POST["passUserReg"];
-
-        if( $realPass == "" || $realPass == null){
-            $realPass = "Totodile158";
-        }
-        if( $realUser == "" || $realUser == null){
-            $realUser = "ChrisVega";
-        }
-        function forgotUser(){
-            echo "<script type='text/javascript'>alert('Usuario: ' + user + '\nContraseña: ' + realPass );</script>";
-        }
-    ?> -->
-
-    <script type="text/javascript">
-        var realUser = 1;
-        console.log(realUser);
-
-        function validUser(){
-            var user = document.forms["registro"] ["nameUser"].value;
-            var pass = document.forms["registro"] ["passUser"].value;
-
-            if(user !== realUser || pass !== realPass ){
-                alert("Usuario o Contraseña Incorrecto >:(");
-                return false;
-            }
-        }
-
-        // function forgotUser(){
-        //     window.alert("Usuario: " + realUser +"\n" + "Contraseña: " + realPass);
-        // }
-    </script>
-
+    <title>School Projects!</title>
 </head>
-    
 <body>
-    <div class="formRight vertical-center">
-        <form name="registro" action="mainpage.php" onsubmit="return validUser()" method="POST" class="formBox formBG"> 
-
-            <!-- Nombre de usuario aqui-->
-            <input type="text" name="nameUser" placeholder="Nombre De Usuario" class="textBox"> <br><br>
-            <!-- Contraseña aqui-->
-            <input type="password" name="passUser" placeholder="Contraseña" class="textBox"> <br><br>
-            <input type="submit" value="Entrar" class="sendButton border5px"> <br><br>
-            <input type="button" onclick="forgotUser()" value="Olvidaste Tu Usuario o Contraseña?" class="forgotButton">            
-            <!-- Iniciar sesion y crear cuenta -->
-            <div class="divForm"></div>
-
-            <a href="register.php" class="button registerButton border5px">Crear Cuenta Nueva</a>
-
-        </form>
+    <div class="divHead">
+        <header>
+            <!-- Proyectos escolares por christopher vega -->
+            <nav>
+                <div style="margin-top: 1rem;">
+                <a href="index.html" class="title">Proyectos Escuela</a>                    
+                </div>
+                <ul>
+                    <a href="https://github.com/ATDoesStuff/" class="navLinks">GitHub</a>
+                    <a href="#">External Links</a>
+                    <a href="#">About Me</a> 
+                </ul>
+            </nav>
+        </header>
     </div>
-    
-    <div class="title ">
-        <h1>Fakebook</h1>
-        <h2>Fakebook te ayuda a comunicarte y compartir<br>con las personas que forman parte de tu vida.</h2>
-    </div>
+    <main>
+        <div class="post">
+            <h3>HTML | Act 16</h3>
+            <img src="/res/act16SS.png" alt="foto actividad 16" class="ssProjects">
+            <p>Demostracion de uso de CSS y Forms</p>
+            <a href="/html/index.html">Link a proyecto</a>            
+        </div>
+        <div class="post">
+            <h3>Random | Wedding</h3>
+            <img src="/res/weddingSS.png" alt="foto random1" class="ssProjects">
+            <p>Ni idea, pero igual y sirve de algo</p>
+            <a href="/wedding/wedding.html">Link a proyecto</a>            
+        </div>
+        <div class="post">
+            <h3>JS | Alerts & Prompts</h3>
+            <img src="/res/prompts1SS.png" alt="foto prompts1" class="ssProjects">
+            <p>Demostracion de uso de prompts y alerts</p>
+            <a href="/js/AlertPrompts.html">Link a proyecto</a>            
+        </div>
+        <div class="post">
+            <h3>JS | Prompts & Forms</h3>
+            <img src="/res/prompts2SS.png" alt="foto prompts2" class="ssProjects">
+            <p>Demostracion de uso de prompts y alerts</p>
+            <a href="/js/promptsYforms.html">Link a proyecto</a>            
+        </div>
+    </main>
+    <footer>
+        <p>@Christopher Vega Mendez 2021</p>
+    </footer>
 </body>
 </html>

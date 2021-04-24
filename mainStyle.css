@@ -1,0 +1,105 @@
+:root{
+    --textTitle: #FFFFFF;
+    --mainText: #444444;
+    --textLinks: #1c1c1c;
+    --bgTitles: #232023;
+    --bgMain: #ecf0f1;
+
+    --borders: #BFBFBF;
+    --bordersMain: #FFFFFF;
+}
+
+html{
+    font-size: 62.5%;
+    height: 100%;
+}
+body{
+    font-size: 16px;
+    height: 100%;
+    font-family: "Nunito", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Navegacion principal */
+header{
+    background-color: var(--bgTitles);
+    color: var(--textTitle);
+    margin-top: 0;
+    padding: 1rem;
+}
+nav{
+    display: flex;
+    justify-content:safe;
+}
+nav a{
+    padding: 1.5rem;
+    color: var(--textTitle);
+    text-decoration: none;
+}nav a:hover{
+    text-decoration: underline;
+}
+ul{
+    width: max-content;
+    justify-content: flex-end;
+}
+.title{
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    color: var(--textTitle);
+    text-decoration: none;
+}
+
+h1{
+    margin-bottom: 0;
+}
+a{
+    text-decoration: none;
+    color: var(--textLinks);
+}
+a:hover{
+    text-decoration: underline;
+}
+main{
+    padding: 2rem;
+    border: 1rem solid var(--bordersMain);
+    background-color: var(--bgMain);
+    color: var(--mainText);
+    margin-top: 72px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+footer{
+    background-color: var(--bgTitles);
+    color: var(--textTitle);
+    text-align: center;
+    margin: 0;
+    padding: 2rem;
+}
+footer p, footer a{
+    margin: 0;
+
+}
+.post{
+    margin: 1rem 4rem;
+    text-align: center;
+}
+.post h3{
+    font-size: 2.25rem;
+    text-decoration: underline;
+}
+.divHead{
+    position: fixed;
+    right: 0px;
+    bottom: 500px;
+    top: 0px;
+    left: 0px;
+}
+
+.ssProjects{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    border: 1rem solid var(--bgTitles);
+}

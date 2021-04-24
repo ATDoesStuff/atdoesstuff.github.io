@@ -1,0 +1,101 @@
+<!-- 
+    Practica Guiada DAEC 4AVP
+    Christopher Vega Mendez
+    Uso de Alerts & Prompts a la par que Operaciones Aritmeticas
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Chris Vega">
+    <meta name="description" content="Uso de Prompt & Alert (ventanas emergentes)">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheets & Fonts -->
+    <link rel="preload" href="../normalize.css">
+    <link rel="preload" href="jsStyle.css">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="jsStyle.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Zilla+Slab&display=swap" rel="stylesheet"> 
+
+    <title>Expresiones - PG DAEC</title>
+</head>
+<body>
+    <main>
+        <section>
+            <!-- Se da una alert con el resultado de una simple suma -->
+            <h2>1. Expresiones Matematicas</h2>
+            <p>Desplegable que calcula 4 + 9</p>
+            <input type="button" id="clickMath" value="Alert Math">
+            <script type="text/javascript">
+                document.getElementById("clickMath").onclick = function() 
+                {
+                    var matematica = 4 + 9
+                    window.alert("4 + 9 = " + matematica)   
+                };
+            </script>
+        </section>
+        <section>
+            <!-- Se le pregunta al usuario que brinde un numero, y luego se multiplica por 1.2 y se le da el resultado -->
+            <h2>2. Convertir Euro a Dolar</h2>
+            <p>Convertidor de Euro a Dolares</p>
+            <p id="euro"></p>
+            <input type="button" id="clickEuro" value="Prompt Euros">
+            <script type="text/javascript">
+                document.getElementById("clickEuro").onclick = function() 
+                {
+                    var X = prompt("Euros a convertir", "5");
+                    if(X == null || X == ""){
+                        document.getElementById("euro").innerHTM = "Favor de no dejar el espacio en blanco"
+                    } else{
+                    var Y = X * 1.20;
+                    document.getElementById("euro").innerHTML="Dolares: " + Y;                    
+                    }
+                };
+            </script>
+        </section>
+        <section>
+            <!-- Se abre una alert tipo accept, y se da una respuesta dependiendo de la opcion elegida por el usuario -->
+            <h2>3. Confirmar un Valor</h2>
+            <p>Abrira un cuadro de confirmacion y se dara una respuesta dependiendo de la respuesta</p>
+            <p id="accept"></p>
+            <input type="button" id="clickAccept" value="Accept Test">
+            <script type="text/javascript">
+                document.getElementById("clickAccept").onclick = function() 
+                {
+                    var X = confirm("Porfavor, acepta :)");
+                    console.log(X);
+                    if(X != true){
+                        document.getElementById("accept").innerHTML = "Porque no aceptaste? >:(";
+                    } else {
+                        document.getElementById("accept").innerHTML = "Gracias por aceptarlo";
+                    }
+                };
+            </script>
+        </section>
+        <section>
+            <!-- Se utiliza .length para calcular el numero de caracteres de un string -->
+            <h2>4. Caracteres de String</h2>
+            <p>Abrira un prompt y contara el numero de Caracteres de la respuesta</p>
+            <p id="length"></p>
+            <input type="button" id="clickCount" value="Prompt Length">
+            <script type="text/javascript">
+                document.getElementById("clickCount").onclick = function() 
+                {
+                    var X = prompt("Escribe algo", "Totodile");
+                    var Y = X.length;
+                    document.getElementById("length").innerHTML="Tu string mide: " + Y;
+                };
+            </script>
+        </section>
+        
+    </main>
+    <footer>
+        <p style="color: gray;">@Chris VegaM</p>
+    </footer>
+    
+</body>
+</html>
